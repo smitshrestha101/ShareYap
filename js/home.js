@@ -1,13 +1,35 @@
 
-function logout() {
+// function logout() {
     
-    <?php
-	// remove all session variables
-	session_unset(); 
+//     <?php
+// 	// remove all session variables
+// 	session_unset(); 
 
-	// destroy the session 
-	session_destroy(); 
+// 	// destroy the session 
+// 	session_destroy(); 
 
-	 header( 'Location: http://www.yoursite.com/new_page.html' ) ;
-	?>
+// 	 //header( 'Location: http://www.yoursite.com/new_page.html' ) ;
+// 	?>
+// }
+
+
+
+
+
+var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider1.oninput = function() {
+    output1.innerHTML = this.value;
+}
+
+var slider = document.getElementById("myRange2");
+var output = document.getElementById("demo2");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    output.innerHTML = this.value;
 }

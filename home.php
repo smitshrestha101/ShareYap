@@ -7,7 +7,7 @@ session_start();
 <html>
 <head>
 	<link href="css/home.css" rel='stylesheet' type='text/css'>
-  <script src = "home.js"></script>
+  
 
 
  
@@ -51,6 +51,24 @@ $_SESSION["username"] = $_POST["uname"];
 
 
 <div class="row">
+
+  <div class="leftcolumn">
+    <div class="card">
+      <h3>Filter results</h3>
+      <h5>Price range</h5>
+      
+      <div class="slidecontainer">
+      <input type="range" min="1" max="4900" value="1" class="slider" id="myRange1">
+      </div>
+      <p>Min Value: <span id="demo1"></span></p>
+
+      <div class="slidecontainer">
+      <input type="range" min="100" max="5000" value="100" class="slider" id="myRange2">
+      </div>
+      <p>Max Value: <span id="demo2"></span></p>      
+    </div>
+  </div>
+
 	
   <div class="midcolumn">
    
@@ -116,7 +134,7 @@ $_SESSION["username"] = $_POST["uname"];
   </div>
 </div>
 
-
+<script src = "js/home.js"></script>
 
 </body>
 </html>
